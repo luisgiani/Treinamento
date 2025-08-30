@@ -45,7 +45,7 @@ def cadastro_restaurante():
     restaurantes.append(dados_do_restaurante)
     print(f'O restaurante {nov_res} foi adicionado com sucesso!')
     voltar_ao_menu()
-
+a
 def listar_restaurantes():
     subtitulo('Listagem de restaurantes')
 
