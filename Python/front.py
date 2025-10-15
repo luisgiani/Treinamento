@@ -1,22 +1,26 @@
 import flet as ft
 
 def main(page: ft.Page):
-    page.window.width = 430
-    page.window.height = 620
+    page.title = "Projetinho teste"
+    page.window.width = 830
+    page.window.height = 800
     page.bgcolor = "gray"
-    texto = ft.Text(value="Hello, world!", color="green")
-    page.add(
-	ft.Row(controls=[
-		texto,
-		ft.Text("B"),
-		ft.Text("C")
-		])
-	)
-    page.add(
-    ft.Row(controls=[
-        ft.TextField(label="Digite aqui:"),
-        ft.ElevatedButton(text="Clique aqui!")
-    ])
+
+    texto = ft.Row(controls=[
+        ft.Text(value="Qual é a cor de plano de fundo?", color="white", size= 20, text_align='center')],
+        alignment='center'
     )
+
+    Digitar = ft.Row(controls=[
+        ft.TextField(label="Digite aqui a sua resposta:", text_size=20)],
+        alignment='center'
+        )
+    
+    btn = ft.Row(controls= [
+        ft.ElevatedButton(text="Responder")],
+        alignment='center' 
+        )
+
+    page.add(texto,Digitar, btn)
 
 ft.app(main)
